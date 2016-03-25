@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper,final,roman]{moderncv}  % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\moderncvtheme[blue]{classic}% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+							  % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+% DOCUMENT LAYOUT
+\usepackage[scale=0.87]{geometry} % Jouer avec les marges
+\setlength{\hintscolumnwidth}{3.5cm}
+\AtBeginDocument{\recomputelengths}
+% FONTS
+%\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+
+% Remove % to set to different fonts
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
+%\setmonofont[Scale=0.8]{Monaco} 
+
+% ---- CUSTOM AMPERSAND
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+
+% ---- MARGIN YEARS
+%\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
+
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+
+
+% Personal Information 
+\firstname{Pierre}
+\familyname{Sauvage}
+\address{20 Quai de la Marne}{75019 Paris}
+\mobile{+33 6 82 46 33 72}
+\email{pierre@adaltas.com}
+\extrainfo{Célibataire - 24 ans} 
+\photo[64pt]{photo_cv}
+
+%TODO Modify the title
+\title{Consultant Big Data}
+
+\nopagenumbers{}
+
+\begin{document}
+
+\maketitle
+
+\section{Expériences professionnelles}
+\cventry{Nov. 14}{Consultant Big Data}{Adaltas}{Ile-de-France}{}{\begin{itemize}
+\item Expert DevOp Hadoop
+\item Ingénieur d'étude / Veille technologique
+\item Intervenant externe en école d'ingénieur
+\item Développeur Node.js, Java/Scala, C++, Python
+\end{itemize}}
+\cventry{Févr. 14 -- Août 14}{Stagiaire Recherche}{Laboratoire LACSC}{Paris}{}{\begin{itemize}
+\item Analyse et modélisation mathématique : chorégraphie de services pour l’Internet des Objets (IoT)
+\item Élaboration d’un logiciel de design d’applications pour un framework IoT orienté SMA
+\item Intervenant externe à ECE Paris pour le cours d’Initiation Linux (deuxième année)
+%\item Intervenant externe pour le cours INF206, chargé de TD
+\end{itemize}}
+\cventry{Mars 13 -- Juil. 14 \\ \& \\ Juin 11 -- Juil. 11}{Stagiaire Développement Web}{Global Computer Consulting}{Paris}{}{Développement d’un intranet orienté OS (Web OS) -- technologie AJAX\begin{itemize}
+\item Développement d’une web-application de gestion de projet
+\item Développement d’un navigateur de fichier, gestion BDD, corrections de bugs
+\end{itemize}}
+\cventry{Mai 12 -- Juil. 12}{Stagiaire Infrastructure \& Réseaux}{Owliance}{Paris}{}{Responsable de la mise en place d’un nouveau système d’information pour le monitoring des équipements réseaux (serveurs, routeurs, switches)}
+\cventry{Juil. 10 -- Août 10 \\ \& \\ Oct. 10}{Assistant Informatique PAO}{MANUTAN International}{Paris}{}{Intégration de contenu dans un PIM (STEP)\begin{itemize}
+\item Préparation du catalogue 2011
+\item Création d’un système d’automatisation de formatage de tableaux prix
+\end{itemize}}
+
+
+\section{Formation}
+%\cventry{years}{degree/job title}{institution/employer}{localization}{grade}{description}
+\cventry{2009 -- 2014}{Ingénieur généraliste}{ECE Paris}{Paris}{}{Spécialisation SI : Big Data, Technologies de l'Internet}
+\cventry{2011}{Engineering}{Concordia University}{Montréal}{}{Informatique, Electronique, Economie, Anglais}
+\section{Compétences} 
+  \cvline{Informatique}{\vspace{-0.3cm}
+    \begin{itemize}
+      \item Écosystème Hadoop (Hadoop, HBase, Hive, Spark)
+      \item Administration système Linux/Unix
+      \item Développement logiciel (C, C++, Java, Scala, C\#)
+      \item Web \& IoT (HTML5, Node.js, PHP5, SQL, IoT)
+    \end{itemize}
+  }
+  \cvitemwithcomment{Anglais}{Courant}{TOEFL 610}
+  \cvitemwithcomment{Allemand}{Notions}{LV2}
+    
+\section{Centres d'intérêt}
+	\cvline{Associatif}{Vice-Président \& cofondateur du Bureau des Arts ECE  (2011 -- 2013)}
+	\cvline{Loisir}{Pratique et enseignement guitare \& batterie, aviation, œnologie}
+
+\section{Annexe - Projets}
+  \subsection{Projets professionnels}
+    \cventry{En cours}{Ryba}{Projet Adaltas/Open Source}{Adaltas}{}{Logiciel de déploiement de cluster Hadoop sécurisé orienté DevOps en \textbf{Node.js}}
+    \cventry{En cours}{Monitoring Hadoop}{Projet EDF}{P. Sauvage}{}{Monitoring \textbf{pro-actif} de Clusters Hadoop
+    \begin{itemize}
+      \item Monitoring et alerte via \textbf{Shinken}
+      \item Gestion automatique des pannes via \textbf{Shinken, Ryba}
+      \item Analyse de logs via \textbf{Log4j, Logstash, ElasticSearch, Kibana}
+      \item Analyse de métrique via \textbf{graphite, Grafana}
+      \item Restitution via \textbf{NagVis}
+    \end{itemize}}
+    \cventry{En cours}{LooP}{Projet EDF}{P. Sauvage, C. Vallée}{}{Solution de monitoring de temperature en DataCenter par Capteur Sans fil
+    \begin{itemize}
+      \item Mesure via capteurs SF \textbf{EnOcean} (Aggregation par \textbf{Raspberry Pi})
+      \item Buffer via cluster \textbf{Kafka}
+      \item Stockage via BD orientée métrique \textbf{HBase/OpenTSDB}
+      \item Analyse via \textbf{Spark} (En cours)
+      \item Restitution via \textbf{Grafana}
+    \end{itemize}}
+    \cventry{En cours}{FEC}{Projet EDF}{P. Sauvage}{}{Modélisation données financière en graphe
+    \begin{itemize}
+      \item Stockage via BD orientée Graphe \textbf{HBase/TitanDB}
+      \item Pattern-Matching via \textbf{Gremlin}
+      \item Graph-Processing via \textbf{Giraph/Spark}
+      \item Restitution via \textbf{Rexster}
+    \end{itemize}}
+  \subsection{Projets personnels/scolaires}
+	\cventry{2014}{Neolog}{Projet ECE / Open Source}{P. Sauvage, C. Berezowski}{}{Logiciel de détection et d'étude statistique de néologisme sur twitter. \textbf{Hadoop, Node.js}}
+	\cventry{2014}{EMMA}{Projet Open Source}{C. Duhart, P. Sauvage, N. Mardegan}{}{Optimisation de répartition de ressources pour un framework systèmes distribués. \textbf{Petri Nets, Java, C, Contiki OS, CoAP}.}
+	\cventry{2014}{HEMMA}{Projet ECE}{P. Sauvage, A. Courtin, P.A Bonneau}{}{Simulateur de Réseau de Pétri orienté systèmes multi-agents (SMA). \textbf{Petri Nets, Java}.}
+	\cventry{2013}{EMAS}{Projet ECE}{P. Sauvage, A. Courtin, D. Conq}{}{Logiciel de répartition d'énergie (architecture holonique). \textbf{Java, Jade, SMA}.}
+	\cventry{2011}{Look 'n Click}{Projet ECE}{P. Sauvage, A. Courtin}{}{Contrôle de la souris via le déplacement et le clignotement des yeux. \textbf{C++, OpenCV}.}
+\section{Annexe - Publications scientifiques}
+  \subsection{Conference Papers}
+	\cvline{AICS'14}{\underline{P. Sauvage}, A. Courtin, P.A Bonneau, K. Chauffour, V. Claisse. \newblock {\em An Extension of Petri Network for Multi-Agent System Representation}. International Conference on Artificial Intelligence and Computer Science, September 2014, Bandung, Indonesia.}
+	\cvline{ICSCISIT'13}{\underline{P. Sauvage}, A. Courtin. \newblock {\em Optimization of stream distribution in Tree-like Structure}. International Conference on Soft Computing, Intelligent Systems and Information Technology, October 2013, Osaka, Japan.}
+  	\cvline{ICPSE'13}{\underline{P. Sauvage}, A. Courtin, L. Elkaim, D. Conq, V. Claisse. \newblock {\em Holonic Distributed Management Of Power Resources}. International Conference on Power Science and Engineering, August 2013, Kuala Lumpur, Malaysia.}
+\end{document}
